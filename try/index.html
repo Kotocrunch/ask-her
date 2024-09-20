@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask to Be My Girlfriend</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: lightskyblue;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        #yesButton {
+            background-color: pink;
+        }
+        #noButton {
+            background-color: gray;
+            position: relative; /* Relative positioning for proper movement */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+<img src="cat1.jpg" alt="Cute Image" style="max-width: 300px; margin-bottom: 20px;">
+<h1>Do you enjoy talking to me?</h1>
+<div class="button-container">
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+</div>
+
+<script>
+    document.getElementById('yesButton').addEventListener('click', function() {
+        alert('U are so beautiful HEHEHE :>');
+    });
+
+    document.getElementById('noButton').addEventListener('click', function() {
+        const noButton = document.getElementById('noButton');
+        const x = Math.random() * (window.innerWidth - 100);
+        const y = Math.random() * (window.innerHeight - 100);
+        noButton.style.position = 'absolute'; // Change to absolute for free movement
+        noButton.style.left = x + 'px';
+        noButton.style.top = y + 'px';
+    });
+</script>
+
+</body>
+</html>
